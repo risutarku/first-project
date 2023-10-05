@@ -30,8 +30,8 @@
 
 ```mermaid
   graph TD;
-      untracked-->staged+tracked+git_commit;
-      staged+tracked+git_commit-->tracked+changes;
-      tracked+changes-->modified+tracked(changed)+git_add;
-      modified+tracked(changed)+git_add-->staged+tracked+git_commit;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
 ```
