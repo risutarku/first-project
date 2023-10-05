@@ -30,8 +30,8 @@
 
 ```mermaid
   graph TD;
-      untracked + git add(подготовили ноунэйм файл к коммиту)-->tracked + staged (файл теперь отслеживаем нашим _git_ и готов к коммиту) + git commit;
-      tracked + staged (файл теперь отслеживаем нашим _git_ и готов к коммиту) + git commit-->tracked(файл отслеживаем и закоммичен) + __какие-то изменения__;
-      tracked(файл отслеживаем и закоммичен) + __какие-то изменения__-->modified(закоммиченный файл был изменен и его последняя версия отличается от версии в последнем коммите) + git add(подготовили измененный файл к коммиту);
-      modified(закоммиченный файл был изменен и его последняя версия отличается от версии в последнем коммите) + git add(подготовили измененный файл к коммиту)-->tracked + staged (файл теперь отслеживаем нашим _git_ и готов к коммиту) + git commit;
+	untracked-->staged+tracked+git_commit;
+	staged+tracked+git_commit-->tracked+changes;
+	tracked+changes-->modified+tracked(changed)+git_add;
+	modified+tracked(changed)+git_add-->staged+tracked+git_commit;
 ```
