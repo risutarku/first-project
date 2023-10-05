@@ -29,8 +29,8 @@
 
 ```mermaid
   graph TD;
-      A-->B;
-      B-->C;
-      C-->D;
-      D-->B;
+      UNTRACKED-->STAGED_TRACKED;
+      STAGED_TRACKED-->TRACKED;
+      TRACKED-->MODIFIED;
+      MODIFIED-->STAGED_TRACKED;
 ```
